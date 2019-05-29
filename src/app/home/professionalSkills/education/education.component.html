@@ -1,0 +1,16 @@
+<table class="table table-bordered" *ngFor="let education of dataEducations">
+    <tbody>
+        <tr>
+            <th scope="row">{{headersEducations.institution}}</th>
+            <td>{{education.institution}}</td>
+        </tr>
+        <tr>
+            <th scope="row">{{headersEducations.dateAttended}}</th>
+            <td>{{education.dateAttended}}</td>
+        </tr>
+        <tr>
+            <th scope="row">{{headersEducations.qualification}}</th>
+            <td>{{education.qualification}}</td>
+        </tr>
+    </tbody>
+</table>

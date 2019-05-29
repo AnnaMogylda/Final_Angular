@@ -1,0 +1,58 @@
+ul {
+    list-style: none;
+    display: flex;
+}   
+
+a {
+    text-decoration: none; 
+    color: #9d43f7;
+    padding: 5px 10px;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+
+.active{
+    color: #fff;
+    background-color:#D66786 ;
+}
+
+h4{
+    color: #9d43f7;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+:host /deep/ button{
+    color: white;
+    background: #9d43f7;
+    border: 2px solid #9d43f7;
+    border-radius: 10px; 
+    font-size: 24px;
+    padding: 10px 30px;
+}
+
+.innerRouting{
+    margin-left: 0;
+}
+
+:host /deep/ table{
+    margin: 10px 0 50px 0;
+}
+
+:host /deep/ tbody tr:nth-child(odd){
+    background-color: #d9b6fc ;
+}
+
+:host /deep/ tbody tr:hover{
+    background-color: #D66786;
+}
+
+:host /deep/ button:hover{
+    background-color:#fff;
+    border: 2px solid #D66786;
+    color: #D66786;
+}
+
+
+

@@ -1,0 +1,29 @@
+div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+img, p, h4{
+    width: 355px;
+}
+
+img{ 
+    height: 214px;
+    margin-top: 20px;
+    margin-bottom: 20px;    
+}
+
+p{
+    text-align: justify;
+}
+
+p span{ 
+    font-weight: 700;
+}
+
+.desc{
+    max-height: 250px;
+    margin-bottom: 20px;
+}
+
+

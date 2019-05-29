@@ -1,0 +1,17 @@
+<table class="table table-striped table-bordered">
+   
+    <thead>
+        <tr>
+            <th scope="row">{{languageHeaders.language}}</th>
+            <th>{{languageHeaders.written}}</th>
+            <th>{{languageHeaders.spoken}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let foreignLanguage of languageData">
+            <td scope="row">{{foreignLanguage.language}}</td>
+            <td>{{foreignLanguage.written}}</td>
+            <td>{{foreignLanguage.spoken}}</td>
+        </tr>   
+    </tbody>
+</table>

@@ -1,0 +1,68 @@
+
+p{
+    font-size: 18px;
+    font-weight: 700;
+    color: #D66786;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}   
+
+a {
+    text-decoration: none; 
+    color: #9d43f7;
+    padding: 5px 10px;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+button{
+    margin: 20px;
+}
+
+table > *{
+    text-align: center;
+}
+
+table tr th{
+    width: 250px;
+}
+
+img{
+    height: 100px;
+    max-width: 150px;
+}
+
+.active{
+    color: #fff;
+    background-color:#D66786 ;
+}
+
+.main{
+    margin: auto 100px;
+}
+
+.marginStyle{
+    margin-bottom: 20px;
+}
+
+.header2Style{
+    padding-top: 20px;
+
+}
+
+.message{
+    height: 30px;
+    color: red;
+    font-size:20px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+
+
+
+
+

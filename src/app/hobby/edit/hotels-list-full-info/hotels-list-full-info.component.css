@@ -1,0 +1,32 @@
+.outerTable{
+    font-size: 20px;
+}
+
+.widthCorrection{
+    min-width: 120px;
+    max-width: 150px;
+}
+
+img{
+    height: 200px;
+    max-width: 280px;
+}
+
+.innerTable{
+    padding: 0;
+    width: 100px;
+    background-color:white;
+    border: 2px solid #9d43f7;
+}
+
+.innerTable tr td, .innerTable tr th{
+    padding: 0;
+    padding-left: 10px;
+    border: 1px solid #9d43f7;
+}
+
+button{
+    margin: 10px 20px 10px;
+}
+
+

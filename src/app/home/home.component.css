@@ -1,0 +1,16 @@
+.about {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 20px;
+}
+
+img {
+    width: 400px;
+    max-height: 420px;
+    border-radius:50%;
+    margin: 20px 30px;
+}
+
+
+
+

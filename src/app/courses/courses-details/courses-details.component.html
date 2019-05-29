@@ -1,0 +1,7 @@
+<div *ngIf="course">
+    <h4>Перечень уроков:</h4>
+    <ol class="pills">
+        <li *ngFor="let lesson of lessons">{{lesson}}</li>
+    </ol>
+</div>
+<button (click) = "goToCoursesList()"> Go to courses list</button>

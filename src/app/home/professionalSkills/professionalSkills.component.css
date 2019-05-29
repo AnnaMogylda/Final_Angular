@@ -1,0 +1,26 @@
+.row {
+    width: 100%;
+}
+
+.list-group-item {
+    font-size: 22px;
+    color: #9d43f7;
+}
+
+.list-group .active{
+    background-color: #D66786;
+    border-color: #D66786;
+    color: #fff;
+}
+
+:host /deep/ table tbody tr th{
+    width: 30%;
+}
+
+:host /deep/ table thead tr th:first-of-type{
+    width: 30%;
+}
+
+
+
+

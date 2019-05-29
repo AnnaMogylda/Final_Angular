@@ -1,0 +1,80 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-">
+            <h2 [ngStyle]="{'margin-left':'20px'}">List of Hotels</h2>
+            <p>
+                <button class="btn" (click)="createHotel()">Create</button>
+                <button class="btn" (click)="refresh()">Refresh</button>
+                <button class="btn" (click)="goToHotelsList()">Go back</button>
+                <button class="btn" (click)="goToAdminPage()">Admin</button>
+            </p>
+            <div *ngIf="errorMessage" class="alert alert-danger">
+                {{errorMessage}}
+            </div>
+            <table class="table table-striped outerTable">
+                <tr>
+                    <th>Country</th>
+                    <th class="widthCorrection">Name</th>
+                    <th>Image</th>
+                    <th>Rating</th>
+                    <th class="widthCorrection">Base price</th> 
+                    <th>Prices</th>
+                    <th>AdditionalServices</th>
+                    <th></th>
+                </tr>
+                <tr *ngFor="let hotel of hotels">
+                    <td> {{hotel.country}} </td>
+                    <td> {{hotel.name}} </td>
+                    <td> 
+                        <img [src]="hotel.img">
+                    </td>
+                    <td> {{hotel.rating}} </td>
+                    <td> {{hotel.basePrice}} </td>
+                    <td style="width:200px">
+                        <table class="innerTable" style="width:200px">
+                            <tr>
+                                <th>Guests</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <td>{{guests[0]}}</td>
+                                <td> {{hotel.pricesPerRoom[guests[0]]}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{guests[1]}}</td>
+                                <td> {{hotel.pricesPerRoom[guests[1]]}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{guests[2]}}</td>
+                                <td> {{hotel.pricesPerRoom[guests[2]]}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{guests[3]}}</td>
+                                <td> {{hotel.pricesPerRoom[guests[3]]}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{guests[4]}}</td>
+                                <td> {{hotel.pricesPerRoom[guests[4]]}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{guests[5]}}</td>
+                                <td> {{hotel.pricesPerRoom[guests[5]]}}</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <ul>
+                            <li *ngFor="let item of hotel.additionalServices">
+                                {{item}}
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <button class="btn btn-default" (click)="editHotel(hotel)">Edit</button>
+                        <button class="btn btn-default" (click)="deleteHotel(hotel)">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<table class="table table-bordered" *ngFor="let training of trainingData">
+    <tbody>
+        <tr>
+            <th scope="row">{{trainingHeaders.name}}</th>
+            <td>{{training.name}}</td>
+        </tr>
+        <tr>
+            <th scope="row">{{trainingHeaders.dateEnded}}</th>
+            <td>{{training.dateEnded}}</td>
+        </tr>
+        <tr>
+            <th scope="row">{{trainingHeaders.status}}</th>
+            <td>{{training.status}}</td>
+        </tr>
+        <tr>
+            <th scope="row">{{trainingHeaders.provider}}</th>
+            <td>{{training.provider}}</td>
+        </tr>
+        <tr>
+            <th scope="row">{{trainingHeaders.description}}</th>
+            <td>{{training.description}}</td>
+        </tr>
+    </tbody>
+</table>
