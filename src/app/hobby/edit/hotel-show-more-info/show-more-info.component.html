@@ -1,0 +1,46 @@
+<h2>{{currentHotel?.name}}</h2>
+<div class="wrapper">
+    <div class="imgWrapper">
+        <img [src]="currentHotel?.img">
+    </div>
+    <div class="innerWrapper">
+        <div>
+            <p>
+                <span> Country: </span>{{currentHotel?.country}}
+            </p>
+            <p>
+                 <span>Name: </span> {{currentHotel?.name}}
+            </p>
+            <p>
+                <span>Rating: </span>{{currentHotel?.rating}} 
+            </p>
+            <p>
+                <span>Minimum price: </span>{{currentHotel?.basePrice}}
+            </p>
+            <div *ngIf="showAddServices">
+                <p>
+                    <span>Additional services: </span>
+                </p>
+                <ul>
+                    <li *ngFor="let item of currentHotel?.additionalServices">
+                        {{item}}
+                    </li>
+                </ul>
+            </div>
+        </div>       
+        <div>
+            <p> 
+                <span> Prices for room: </span>
+            </p>
+            <table>
+                <tbody>
+                    <tr *ngFor="let guest of guests">
+                        <td> Number of guests: {{guest}}</td>
+                        <td> USD {{currentHotel?.pricesPerRoom[guest]}} </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn" (click)="goBack()">Go back</button>
+        </div>      
+    </div>
+</div>

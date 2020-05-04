@@ -1,17 +1,11 @@
-<table class="table table-striped table-bordered">
-    <thead>
-        <tr>
-            <th scope="row">{{skillsHeader.category}}</th>
-            <th>{{skillsHeader.list}}</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let skill of skillsData">
-            <td scope="row">{{skill.category}}</td>
-            <td>{{skill.list}}</td>
-        </tr>   
-    </tbody>
-</table>
+<div class="wrapper">
+    <h4>Tools:</h4>
+    <ul>
+        <li *ngFor="let skill of skillsData">
+            {{skill}}
+        </li>
+    </ul>
+</div>
 
 
 

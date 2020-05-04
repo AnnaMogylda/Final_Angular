@@ -6,8 +6,6 @@ import {ExperienceComponent} from "./experience/experience.component";
 
 
 const routesProfessionalSkills: Routes = [
-    {path:'education', component: EducationComponent},
-    {path:'experience', component: ExperienceComponent},
     {path:'', redirectTo: "home", pathMatch: "full"},
   ];
   

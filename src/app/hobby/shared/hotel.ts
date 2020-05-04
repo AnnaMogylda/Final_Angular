@@ -8,7 +8,8 @@ export class HotelItem {
         public pricesPerRoom:any,
         public daysOfStay: number,
         public additionalServices?:string[],
-        public id?:string
+        public id?:string,
+        public starsIcons?:any
     )
     {}
 }

@@ -16,6 +16,11 @@ h4{
     margin-bottom: 30px;
 }
 
+.wrapper{
+  margin-top: 90px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
 
 .pills {
     margin-left: 0;
@@ -29,7 +34,7 @@ h4{
     left: 1.5em;
     margin-bottom: 0.75em;
     padding-left: 1em;
-    background: #E3DEDC;
+    background: #e3e4e6;
   }
   .pills li:before {
     padding: 10px 0;
@@ -41,10 +46,15 @@ h4{
     text-align: center;
     color: white;
     font-weight: bold;
-    background: #D66786;
+    background: #805ce4;
     border-bottom-left-radius: 70em;
     border-top-left-radius: 70em;
     counter-increment: li;
     content: counter(li);
   }
+
+  .pills li:hover{
+    background-color: #b5b9ff;
+}
+
 

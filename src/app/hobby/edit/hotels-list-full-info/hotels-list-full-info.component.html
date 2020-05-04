@@ -1,80 +1,65 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-">
-            <h2 [ngStyle]="{'margin-left':'20px'}">List of Hotels</h2>
-            <p>
-                <button class="btn" (click)="createHotel()">Create</button>
-                <button class="btn" (click)="refresh()">Refresh</button>
-                <button class="btn" (click)="goToHotelsList()">Go back</button>
-                <button class="btn" (click)="goToAdminPage()">Admin</button>
-            </p>
-            <div *ngIf="errorMessage" class="alert alert-danger">
-                {{errorMessage}}
-            </div>
-            <table class="table table-striped outerTable">
+<div class="wrapper">
+    <div class="nav">
+        <div>
+            <button class="btn" (click)="createHotel()">Create</button>
+            <button class="btn" (click)="refresh()">Refresh</button>
+        </div>
+        <div class="linkStyle">
+            <button class="btn" (click)="goToHotelsList()">Go back</button>
+            <button class="btn" (click)="goToAdminPage()">Admin</button>
+        </div>
+    </div>
+    <div>
+        <h2>List of Hotels</h2>
+    </div>
+    <div>
+        <table class="table table-striped outerTable">
+            <tbody>
                 <tr>
                     <th>Country</th>
-                    <th class="widthCorrection">Name</th>
-                    <th>Image</th>
+                    <th>Hotel name</th>
                     <th>Rating</th>
-                    <th class="widthCorrection">Base price</th> 
-                    <th>Prices</th>
-                    <th>AdditionalServices</th>
+                    <th></th>
                     <th></th>
                 </tr>
                 <tr *ngFor="let hotel of hotels">
                     <td> {{hotel.country}} </td>
                     <td> {{hotel.name}} </td>
-                    <td> 
-                        <img [src]="hotel.img">
-                    </td>
                     <td> {{hotel.rating}} </td>
-                    <td> {{hotel.basePrice}} </td>
-                    <td style="width:200px">
-                        <table class="innerTable" style="width:200px">
-                            <tr>
-                                <th>Guests</th>
-                                <th>Price</th>
-                            </tr>
-                            <tr>
-                                <td>{{guests[0]}}</td>
-                                <td> {{hotel.pricesPerRoom[guests[0]]}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{guests[1]}}</td>
-                                <td> {{hotel.pricesPerRoom[guests[1]]}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{guests[2]}}</td>
-                                <td> {{hotel.pricesPerRoom[guests[2]]}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{guests[3]}}</td>
-                                <td> {{hotel.pricesPerRoom[guests[3]]}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{guests[4]}}</td>
-                                <td> {{hotel.pricesPerRoom[guests[4]]}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{guests[5]}}</td>
-                                <td> {{hotel.pricesPerRoom[guests[5]]}}</td>
-                            </tr>
-                        </table>
+                    <td>
+                        <button class="btnCustom showMoreInfoStyle" (click)="showMoreInfo(hotel)">Show more info
+                            <span><img class="forwardIcon" [src] = "forwardIconSrc"></span>
+                        </button>
                     </td>
                     <td>
-                        <ul>
-                            <li *ngFor="let item of hotel.additionalServices">
-                                {{item}}
-                            </li>
-                        </ul>
-                    </td>
-                    <td>
-                        <button class="btn btn-default" (click)="editHotel(hotel)">Edit</button>
-                        <button class="btn btn-default" (click)="deleteHotel(hotel)">Delete</button>
+                        <button class="btnCustom" (click)="editHotel(hotel)">Edit</button>
+                        <button type="button" class="btnCustom" data-toggle="modal" data-target="#exampleModalCenter" (click)="deleteHotel(hotel)">Delete</button>
                     </td>
                 </tr>
-            </table>
+            </tbody>
+        </table>
+    </div>  
+    <div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Delete hotel</h5>
+                <button type="button" class="close closeBtnStyle" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <p>You are going to delete hotel <b> <span class="currentHotelStyle">{{currentHotelName}}.</span></b></p>
+                  <p>Please confirm that hotel should be deleted. </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" (click) = "goBack()">Cancel</button>
+                <button type="button" class="btn btn-primary" (click)="confirmDeleteHotel(currentHotel)"data-dismiss="modal" >Confirm</button>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+    </div> 
 </div>

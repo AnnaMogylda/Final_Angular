@@ -1,0 +1,162 @@
+label, th, p{
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.errorStyle{
+   background-color: #f8d7da; 
+}
+
+.alert{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+input, select{
+    border:none;
+    border-bottom: 1px solid #bdbebf;
+}
+
+table{
+    margin-top: 0; 
+    margin-bottom: 20px; 
+}
+
+table thead tr th{
+    padding-bottom: 2px;
+    border-bottom: 3px solid #805ce4;
+}
+
+.showPricesStyle td:nth-of-type(1){
+    padding-top: 30px;
+}
+.showPricesStyle td:nth-of-type(2){
+    padding-top: 30px;
+}
+
+.showPricesStyle td:nth-of-type(3){
+    padding-top: 30px;
+}
+
+
+.showOldPricesStyle td{
+    padding-top: 15px;
+}
+
+table tbody tr{
+    background-color: transparent;
+}
+    
+
+table tbody tr td{
+    height: 50px;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.guestStyle{
+    width: 200px;
+    text-align: center;
+    white-space: nowrap;
+    padding-right: 30px;
+}
+
+table tbody tr td input{
+    width: 150px;
+    padding-left: 10px;
+}
+
+input[type="button"]{
+    margin-right: 40px;
+}
+
+.addItemStyle{
+    margin-right: 0;
+    white-space: nowrap;
+    width: 150px;
+    background-color: transparent;
+    color:#805ce4;
+    font-size: 22px;
+    padding: 10px 10px;
+}
+
+.addItemStyle:hover{
+    background-color: #805ce4;
+    color:#fff;
+}
+
+.priceStyle{
+    color: #805ce4;
+}
+
+.showOldPricesStyle td{
+    height: 100px;
+}
+
+.showOldPricesStyle td:last-of-type{
+    vertical-align: bottom;
+    margin-bottom: 16px;
+}
+.numberOfGuestStyle{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.oldPriceStyle{
+    margin-bottom: 3px;
+   
+}
+
+.checkboxBtn{
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.checkboxBtn input { 
+    display: none;
+}
+
+.checkboxBtn span {
+    position: relative; 
+    display: inline-block;
+    width: 40px;
+    height: 20px; 
+    border-radius: 20px/20px; 
+    background:  rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.checkboxBtn input + span::before { 
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(143, 141, 141);
+}
+
+.checkboxBtn input:checked + span {
+    position: relative; 
+    display: inline-block;
+    width: 40px;
+    height: 20px; 
+    border-radius: 20px/20px; 
+    background-color: #805ce4;
+    border-bottom: 1px  rgb(143, 141, 141);
+}
+
+.checkboxBtn input:checked + span::before { 
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: -1px;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(143, 141, 141);
+}

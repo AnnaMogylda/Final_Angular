@@ -7,8 +7,7 @@ import { EducationComponent } from "./education/education.component";
 import { ExperienceComponent } from "./experience/experience.component";
 import { TechSkillsComponent } from "./techSkills/techSkills.component";
 import { LanguagesComponent } from "./languages/languages.component";
-import { CertificatesComponent } from "./certificates/certificates.component";
-import {TrainingsComponent} from "./trainings/trainings.component";
+import { CoursesComponent } from "./courses/courses.component";
 
 @NgModule({
     imports: [
@@ -21,8 +20,7 @@ import {TrainingsComponent} from "./trainings/trainings.component";
         TechSkillsComponent,
         ExperienceComponent,
         LanguagesComponent,
-        CertificatesComponent,
-        TrainingsComponent
+        CoursesComponent,
     ],
     exports: [
         ProfessionalSkillsComponent,

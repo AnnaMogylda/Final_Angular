@@ -6,7 +6,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {EditRoutingModule} from "./edit-routing.module";
 import {EditComponent} from "./edit.component";
 import {CreateEditListComponent} from "./hotel-create-edit/create-edit.component";
-import {DeleteListComponent} from "./hotel-delete/delete.component";
+import {ShowMoreInfoComponent} from "./hotel-show-more-info/show-more-info.component";
 import {HotelsListFullComponent} from "./hotels-list-full-info/hotels-list-full-info.component";
 import {HotelsListFullService} from "../shared/hotels-lists-full.service";
 
@@ -15,7 +15,7 @@ import {HotelsListFullService} from "../shared/hotels-lists-full.service";
     declarations: [
         EditComponent,
         CreateEditListComponent,
-        DeleteListComponent,
+        ShowMoreInfoComponent,
         HotelsListFullComponent
     ],
     imports:[

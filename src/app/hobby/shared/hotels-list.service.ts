@@ -1,4 +1,4 @@
-
+    
 import {HotelItem} from "./hotel";
 import {Filters} from "./filters";
 import {Injectable} from "@angular/core";

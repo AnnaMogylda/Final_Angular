@@ -1,23 +1,19 @@
 import { Component } from '@angular/core';
-import {LanguageHeaders, LanguageData} from "./language.interface"
+import {LanguageData} from "./language.interface"
  
 @Component({
     selector: 'languages',
-    templateUrl: 'languages.component.html'
-    // styleUrls: ['home.component.css']
+    templateUrl: 'languages.component.html',
+    styleUrls: ['../professionalSkills.component.css']
 })
 
 export class LanguagesComponent{ 
-
-    languageHeaders:LanguageHeaders = {
-        language: "Language",
-        written: "Written",
-        spoken: "Spoken"
-    }
-
+   
     languageData:LanguageData[] = [
-        {language: "English", written: "Upper-intermediate", spoken: "Advanced"},
-        {language: "German", written: "Beginning", spoken: "Beginning"}
-    ];
+        {language: "Ukrainian", written: "mother tongue", spoken: "mother tongue"},
+        {language: "Russian", written: "mother tongue", spoken: "mother tongue"},
+        {language: "English", written: "upper-intermediate", spoken: "advanced"},
+        {language: "German", written: "beginning", spoken: "beginning"}
+    ];    
 
 }

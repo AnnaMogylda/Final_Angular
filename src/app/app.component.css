@@ -5,7 +5,7 @@ ul {
 
 a {
     text-decoration: none; 
-    color: #9d43f7;
+    color: #805ce4;
     padding: 5px 10px;
     font-size: 30px;
     margin-right: 20px;
@@ -14,22 +14,13 @@ a {
 
 .active{
     color: #fff;
-    background-color:#D66786 ;
+    background-color:#805ce4;
 }
 
 h4{
-    color: #9d43f7;
+    color: #805ce4;
     font-weight: 700;
     font-size: 26px;
-}
-
-:host /deep/ button{
-    color: white;
-    background: #9d43f7;
-    border: 2px solid #9d43f7;
-    border-radius: 10px; 
-    font-size: 24px;
-    padding: 10px 30px;
 }
 
 .innerRouting{
@@ -41,18 +32,56 @@ h4{
 }
 
 :host /deep/ tbody tr:nth-child(odd){
-    background-color: #d9b6fc ;
+    background-color: #f8f9fa ;
 }
 
 :host /deep/ tbody tr:hover{
-    background-color: #D66786;
+    background-color: #b5b9ff;
+}
+
+:host /deep/ button{
+    color: #fff;
+    background: #805ce4;
+    border: 2px solid #805ce4;
+    border-radius: 10px; 
+    font-size: 24px;
+    padding: 10px 30px;
 }
 
 :host /deep/ button:hover{
     background-color:#fff;
-    border: 2px solid #D66786;
-    color: #D66786;
+    border: 2px solid #805ce4;
+    color: #805ce4;
 }
 
+:host /deep/ input[type="button"]{
+    color: #fff;
+    background: #805ce4;
+    border: 2px solid #805ce4;
+    border-radius: 10px; 
+    font-size: 24px;
+    padding: 10px 30px;
+}
 
+:host /deep/ input[type="submit"]{
+    color: #fff;
+    background: #805ce4;
+    border: 2px solid #805ce4;
+    border-radius: 10px; 
+    font-size: 24px;
+    padding: 10px 30px;
+}
+
+:host /deep/.linkStyle > button {
+    margin: 0;
+    padding: 0;
+    margin-right: 40px;
+    background-color: transparent;
+    border: none;
+    color: #805ce4;
+}
+
+:host /deep/ .linkStyle > button:hover{
+    color: #D66786;
+}
 

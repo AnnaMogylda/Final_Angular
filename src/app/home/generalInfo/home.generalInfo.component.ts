@@ -7,7 +7,16 @@ import { Component } from '@angular/core';
 })
 
 export class HomeGeneralInfoComponent{ 
-    name:string = "Anna Lyvytska";
-    age:number = 27;
-    period: string =  "one";
+    experience:number = 1;
+    email:string = "annmogilda@gmail.com";
+    tel:String = "+38(066)5150098";
+    skype:string = "";
+    age:number = 28;
+
+    qualities:String[] = [
+        "Critical thinking and creativity, inquisitive and self-motivated person",
+        "Good communication skills, collaboration with team member",
+        "Skilled in multi-tasking and prioritizing competing deadlines"
+    ]
 }
+	

@@ -1,140 +1,156 @@
-<div class="main">
-    <div class="container-fluid marginStyle">
-        <div class="row">
-            <div class="col-">
-                <button class="btn" (click)="goToAdminPage()">Admin</button>
-                <button class="btn" (click)="goToEditPage()">Edit</button>                            
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-3">
-                <p>Hotels:</p>
-                <select class="custom-select" [(ngModel)] = "nameSelected">               
-                    <option> {{select}}</option>
-                    <option *ngFor="let nameSelected of hotelsNamesList">  
-                        {{nameSelected}} 
-                    </option>
-                </select>
-            </div>
-            <div class="col-2">
-                <p>Countries:</p>
-                <select class="custom-select" [(ngModel)] = "countrySelected">               
-                    <option> {{select}}</option>
-                    <option *ngFor="let countrySelected of countriesList">
-                        {{countrySelected}} 
-                    </option>
-                </select>
-            </div>
-            <div class="col-2">
-                <p> Rating:</p>
-                <select class="custom-select" [(ngModel)] = "ratingSelected">               
-                    <option> {{select}}</option>
-                    <option *ngFor="let ratingSelected of ratingList">  
-                        {{ratingSelected}}
-                    </option>
-                </select>
-            </div>
-            <div class="col-2">
-                <p>Number of people:</p>
-                <select class="custom-select" [(ngModel)] = "guestsSelected">               
-                    <option > {{select}}</option>
-                    <option *ngFor="let guestsSelected of guestsList">  
-                        {{guestsSelected}}
-                    </option>
-                </select>
-            </div>
-            <div class="col-2">
-                <p>Services:</p>
-                <select class="custom-select" [(ngModel)] = "servicesSelected">               
-                    <option> {{select}}</option>
-                    <option *ngFor="let servicesSelected of additionalServices">  
-                        {{servicesSelected}}
-                    </option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 header2Style">
-                <p>Price per days:</p>
-            </div>
-            <div class="col-4 header2Style">
-                <p>Dates of stay:</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-                <span>From </span>
-                <select class="custom-select" [(ngModel)] = "fromPriceSelected" >               
-                    <option> {{select}}</option>
-                    <option *ngFor="let fromPriceSelected of pricesList">  
-                        {{fromPriceSelected}} 
-                    </option>
-                </select>
-            </div>
-            <div class="col-2">
-                <span>To </span>
-                <select class="custom-select" [(ngModel)] = "toPriceSelected">               
-                    <option> {{select}}</option>
-                    <option *ngFor="let toPriceSelected of pricesList">  
-                        {{toPriceSelected}}
-                    </option>
-                </select>
-            </div>
-            <div class="col-3">
-                <span>From </span>
-                <input class="custom-select"  type="date" [(ngModel)]="dateFrom" >
-            </div>
-            <div class="col-3">
-                <span>To </span>
-                <input class="custom-select"  type="date" [(ngModel)]="dateTo">
-            </div> 
-            <div class="col-1">  
-                <button (click) = "onSelect(nameSelected, countrySelected, ratingSelected, guestsSelected, fromPriceSelected, toPriceSelected, dateFrom, dateTo, servicesSelected) ">Submit</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="message col-">{{message}}</div> 
-        </div> 
-    </div>  
-    <div class="container-fluid marginStyle">
-        <table class="table" *ngIf="showHotelsList">
-            <tr>
-                <th scope="col"> Hotel </th>
-                <td scope="col"></td>
-                <th scope="col"> Hotel Rating </th>
-                <th scope="col"> Price </th>
-                <th scope="col"> Days of Stay </th>
-            </tr>
-            <tr *ngFor="let hotel of hotelsList">
-                <td [ngStyle]="{'color':'red'}">{{hotel.name}} </td>
-                <td>
-                    <img [src] = "hotel.img">
-                </td>   
-                <td>{{hotel.rating}}</td>  
-                <td > From $ {{hotel.basePrice}}</td>
-                <td>{{daysSelected}}</td>
-            </tr>
-        </table>
-        <table class="table" *ngIf="!showHotelsList">
-            <tr>
-                <th>Hotel</th>
-                <td scope="col"></td>
-                <th>Hotel Rating</th>
-                <th> Price </th>
-                <th>Days of Stay</th>
-            </tr>
-            <tr *ngFor="let hotel of filteredData">
-                <td>{{hotel.name}} </td>
-                <td>
-                    <img [src] = "hotel.img">
-                </td>    
-                <td>{{hotel.rating}}</td>  
-                <td> From $ {{hotel.basePrice}}</td>
-                <td>{{hotel.daysOfStay}}</td>
-            </tr>
-        </table>
+<main class="wrapper">
+    <div class="linkStyle">
+        <button class="btn" (click)="goToAdminPage()">Admin</button>
+        <button class="btn" (click)="goToEditPage()">Edit</button>                            
     </div>
-</div>
+    <div class="mainFiltersStyle">
+        <div class="guestStyle">
+            <p>Number of people:</p>
+            <select class="custom-select" [(ngModel)] = "guestsSelected" [style.border-color] = 'formattingGuest ? "gray" : "red"'>               
+                <option > {{select}}</option>
+                <option *ngFor="let guestsSelected of guestsList">  
+                    {{guestsSelected}}
+                </option>
+            </select>
+        </div>
+        <div class="datesFiltersStyle">
+            <p class="">Dates of stay:</p>
+            <div> 
+                <div class="dateStyle"> 
+                    <span>From: </span>
+                    <input class="custom-select"  type="date" [(ngModel)]="dateFrom" [style.border-color] = 'formattingDateFrom ? "gray" : "red"' >
+                </div>
+                <div class="dateStyle">
+                    <span>To: </span>
+                    <input class="custom-select"  type="date" [(ngModel)]="dateTo" [style.border-color] = 'formattingDateTo ? "gray" : "red"'>
+                </div> 
+            </div>
+        </div>
+        <div class="">  
+            <button (click) = "onSelect(nameSelected, countrySelected, ratingSelected, guestsSelected, fromPriceSelected, toPriceSelected, dateFrom, dateTo, servicesSelected)">Submit</button>
+        </div>
+        <div class="card-header" id="headingOne">
+            <div class="">
+              <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Advanced filters
+              </button>
+            </div>
+          </div>
+    </div>
+    <div class="accordion" id="accordion">
+        <div class="card">
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    <div class="cardBodyWrapper">
+                        <div>
+                            <p>Countries:</p>
+                            <select class="custom-select" [(ngModel)] = "countrySelected">               
+                                <option> {{select}}</option>
+                                <option *ngFor="let countrySelected of countriesList">
+                                    {{countrySelected}} 
+                                </option>
+                            </select>
+                        </div>
+                        <div>
+                            <p>Hotels:</p>
+                            <select class="custom-select" [(ngModel)] = "nameSelected">               
+                                <option> {{select}}</option>
+                                <option *ngFor="let nameSelected of hotelsNamesList">  
+                                    {{nameSelected}} 
+                                </option>
+                            </select>
+                        </div>
+                        <div>
+                            <p> Rating:</p>
+                            <select class="custom-select" [(ngModel)] = "ratingSelected">               
+                                <option> {{select}}</option>
+                                <option *ngFor="let ratingSelected of ratingList">  
+                                    {{ratingSelected}}
+                                </option>
+                            </select>
+                        </div>
+                        <div>
+                            <p>Price per days:</p>
+                            <div class="PricesStyles">
+                                <div class="PriceStyle">
+                                    <span>From: </span>
+                                    <select class="custom-select" [(ngModel)] = "fromPriceSelected" [style.border-color] = 'formattingPriceFrom  ? "gray" : "red"'>               
+                                        <option> {{select}}</option>
+                                        <option *ngFor="let fromPriceSelected of pricesList">  
+                                            {{fromPriceSelected}} 
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="PriceStyle">
+                                    <span>To: </span>
+                                    <select class="custom-select" [(ngModel)] = "toPriceSelected" [style.border-color] = 'formattingPriceTo ? "gray" : "red"'>               
+                                        <option> {{select}}</option>
+                                        <option *ngFor="let toPriceSelected of pricesList">  
+                                            {{toPriceSelected}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <p>Additional services:</p>
+                              <select class="custom-select" [(ngModel)] = "servicesSelected">               
+                                <option> {{select}}</option>
+                                <option *ngFor="let servicesSelected of additionalServices">  
+                                    {{servicesSelected}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="message" *ngIf="showMessage">
+        <div class="messageTxtStyle"> {{message}}</div>
+        <div>
+            <button class="closeBtnStyle" (click)="hideMessage()" >
+                <img [src] = "closeSrc" class="closeImgStyle">
+            </button>
+        </div>
+    </div>
+    <div class="hotelsStyle">
+        <div *ngIf="showHotelsList" class="hotelsListStyle">
+            <div  *ngFor="let hotel of hotelsList" class="hotelStyle">
+                <img  [src] = "hotel.img" class="hotelImg"> 
+                <p>{{hotel.name}}, {{hotel.country}}</p>
+                <p>
+                    <span class="stars-icon">
+                        <img [src]= "hotel.starsIcons[0]" class="star-icon">
+                        <img [src]= "hotel.starsIcons[1]" class="star-icon">
+                        <img [src]= "hotel.starsIcons[2]" class="star-icon">
+                        <img [src]= "hotel.starsIcons[3]" class="star-icon">
+                        <img [src]= "hotel.starsIcons[4]" class="star-icon">
+                      </span> 
+                </p>
+                <p class="basePriceStyle">From $ {{hotel.basePrice}}</p>
+                <p>For 1 day of stay</p>
+            </div>
+        </div>
+        <div *ngIf="!showHotelsList"  class="hotelsListStyle">
+            <div  *ngFor="let hotel of filteredData" class="hotelStyle">
+                <img  [src] = "hotel.img"  class="hotelImg"> 
+                <p>{{hotel.name}}, {{hotel.country}}</p>
+                <p>
+                    <span class="stars-icon">
+                        <img [src]= "hotel.starsIcons[0]" class="star-icon">
+                        <img [src]= "hotel.starsIcons[1]" class="star-icon">
+                        <img [src]= "hotel.starsIcons[2]" class="star-icon">
+                        <img [src]= "hotel.starsIcons[3]" class="star-icon">
+                        <img [src]= "hotel.starsIcons[4]" class="star-icon">
+                    </span> 
+                </p>
+                <p  class="basePriceStyle">  ${{hotel.basePrice}}</p>
+                <p>For {{hotel.daysOfStay}} day(s) of stay</p>
+            </div>
+        </div>
+    </div>
+</main>
 
 
 

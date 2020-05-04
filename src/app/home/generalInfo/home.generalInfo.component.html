@@ -1,12 +1,28 @@
-<h2> General information </h2>
-<p>  My name is {{name}}, I am {{age}} y.o., Front-End </p>
-<p>      
-    More then  {{period}} year ago I got interested in HTML and CSS and from the very beginning I understood that I finnally know what I want to do in my life.
-</p>
-<p>
-    So I started to learn things myself by watching courses form Microsoft on EdX, free webinars, trying my skills on FreeCodeCamp and reading 
-    malearn.javascript.ru when I decided to learn JavaScript. But with the time being, I have got some many question as well as I have had a feeling that
-    I need to practice more that I have decided to go to the CBS courses where I have learned many new thing and developed my skills. 
-    Currently I am aslo vising courses provided from EPAM to get some more practice, developing my skills in Angular2 and JavaScript.
-</p>
-    
+<div class="container">
+    <div class="row">
+        <div class="col-10 offset-sm-1">
+            <h1>Lyvytska Anna</h1>
+            <h2>Front-end Developer / JS Developer </h2>
+            <p>Looking for full-time/part-time or remote job</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5 offset-sm-1">
+            <p> 
+                <span class="infoHeaderStyle">Commercial experience: </span> {{experience}} year </p>
+            <p>
+                <span class="infoHeaderStyle">Contacts:</span> {{email}}, {{tel}}, Skype:{{skype}} </p>
+            <p> 
+                <span class="infoHeaderStyle">Date of birth: </span>15.05.1991 ({{age}} y.o.) </p>
+        </div>
+        <div class="col-5">
+            <ul> 
+                <p> <span class="infoHeaderStyle"> Personal qualities:</span></p>
+                <li *ngFor="let quality of qualities">
+                    {{quality}}
+                </li>
+            </ul>
+        </div>
+    </div>
+        
+</div>

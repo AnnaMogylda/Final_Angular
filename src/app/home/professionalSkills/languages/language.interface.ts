@@ -1,16 +1,4 @@
-export abstract class ForeignLanguage {
-    language:any;
-    written:any;
-    spoken:any;
-}
-
-export abstract class LanguageHeaders implements ForeignLanguage{
-    language:string;
-    written:string;
-    spoken:string;
-}
-
-export abstract class LanguageData implements ForeignLanguage {
+export abstract class LanguageData   {
     language:string;
     written:string;
     spoken:string;

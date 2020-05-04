@@ -3,9 +3,6 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import { User } from '../shared/user';
 import { Router } from "@angular/router";
 import {AuthService} from "../shared/auth.service";
-import {Observable} from 'rxjs';
-
-
 
 @Component({
     selector: 'admin',
@@ -19,8 +16,6 @@ userForm: FormGroup;
 user: User = new User();
 LogInStatus: string;
 messageInfo:string;
-
-
 
 formErrors = {
     "email" :"",

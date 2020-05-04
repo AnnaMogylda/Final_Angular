@@ -1,0 +1,8 @@
+<div class="wrapper">
+    <h4>Courses:</h4>
+    <ul>
+        <li *ngFor="let course of coursesData">
+            {{course.name}} ({{course.description}}, {{course.year}})
+        </li>
+    </ul>
+</div>

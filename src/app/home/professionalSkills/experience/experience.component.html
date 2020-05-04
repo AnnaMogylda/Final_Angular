@@ -1,71 +1,8 @@
-<table class="table table-bordered">
-        <tbody>
-            <tr>
-                <th scope="row">{{experienceHeader.company}}</th>
-                <td>{{experienceData.company}}</td>
-            </tr>
-            <tr>
-                <th scope="row">{{experienceHeader.duration}}</th>
-                <td>{{experienceData.duration}}</td>
-            </tr>
-            <tr>
-                <th scope="row">{{experienceHeader.role}}</th>
-                <td>{{experienceData.role}}</td>
-            </tr>
-            <tr>
-                <th scope="row">{{experienceHeader.projName}}</th>
-                <td>{{experienceData.projName}}</td>
-            </tr>
-            <tr>
-                <th scope="row">{{experienceHeader.projDesc}}</th>
-                <td>
-                    Freight Rate Exchange Database (FRED) is web-based audit platform. 
-                    It is used for tracking, pre-calculating, auditing shipments as well as releasing them for payment. It can be used with in or across companies. 
-                    Using FRED, shipment data files are received via an interface and that data is matched with an electronic billing file from the carrier. 
-                    Based on the matching results discrepancies are solved if any or processed further to close the audit loop. 
-                    The carrier also has the option to declare any extra or unforeseen costs that he may have via extra costs tool. 
-                    FRED provides solutions which are always set up to the specific needs of the customer.
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">{{experienceHeader.responsibilites}}</th>
-                <td>
-                    <ul>
-                        <li>
-                            Rate card analysis, building logics for uploading them according to the database specifics, entering rate cards to the database.
-                        </li>
-                        <li>
-                            Checking for correct data uploading and registration, data validation.
-                        </li>
-                        <li>
-                            Auditing shipment data files as well as freight invoices.
-                        </li>
-                        <li>
-                            Communicating with shippers and carriers in case of any discrepancies or issues.
-                        </li>
-                        <li>
-                            Clarifying specifics of costs calculation in general as well as for particular shipments.
-                        </li>
-                        <li>
-                            Checking for database appropriate work and reporting about bugs, impropriate work of converters, mapping files updates.
-                        </li>
-                        <li>
-                            Communication with other departments by delegating tasks and performing tasks provided by other departments.
-                        </li>
-                        <li>
-                            Help to implementation department with newly implemented carriers and shippers.
-                        </li>
-                        <li>
-                            Process improvement by creating ideas for automatization.
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-             <tr>
-                <th scope="row">{{experienceHeader.technologies}}</th>
-                <td>
-                    FRED, Jira, Business Intelligence
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div class="wrapper">
+    <div *ngFor="let item of experienceData">
+        <h4>{{item.position}} ({{item.duration}}) <span *ngIf="item.company">, {{item.company}}</span></h4>
+        <ul >
+            <li *ngFor="let responsibility of item.responsibilities">{{responsibility}}</li>
+        </ul>
+    </div>
+</div>
