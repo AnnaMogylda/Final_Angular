@@ -128,11 +128,11 @@ ngOnInit(){
 
 
 public goToAdminPage() {
-    this.router.navigate(["/hobby","admin"]);
+    this.router.navigate(["/hotels","admin"]);
 }
 
 public goToEditPage() {
-    this.router.navigate(["/hobby", "edit"]);
+    this.router.navigate(["/hotels", "edit"]);
 }
 
 public hideMessage(){

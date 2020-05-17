@@ -102,7 +102,7 @@ login() {
         if (this.authService.isLoggedIn) {
             // Получение строки для перенаправления от сервиса
             // если строки нет перенаправляем на страницу по умолчнанию
-            let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : "/hobby/edit";
+            let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : "/hotels/edit";
             // перенапраление пользователя
             this.router.navigate([redirect]);
         } else{
@@ -116,7 +116,7 @@ onSubmit() {
 }
 
 goToHotelsList(){
-    this.router.navigate(["/hobby"]);
+    this.router.navigate(["/hotels"]);
 }
 
 

@@ -9,13 +9,13 @@ import { AdminComponent } from "./admin/admin.component";
 @NgModule({
     imports:[
         RouterModule.forChild([
-            {path:"hobby", component: HotelListComponent},
-            {path:"hobby/admin", component: AdminComponent},
-            {path:"hobby/edit", component: HotelsListFullComponent, canActivate:[AuthGuard]}
+            {path:"hotels", component: HotelListComponent},
+            {path:"hotels/admin", component: AdminComponent},
+            {path:"hotels/edit", component: HotelsListFullComponent, canActivate:[AuthGuard]}
         ])
     ],
     exports: [RouterModule]
 })
 
 
-export class HobbyRoutingModule{}
+export class HotelsRoutingModule{}

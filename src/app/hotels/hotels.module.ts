@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {ReactiveFormsModule} from "@angular/forms";
-import {HobbyRoutingModule} from "./hobby-routing.module";
+import {HotelsRoutingModule} from "./hotels-routing.module";
 import {AuthGuard} from "./shared/auth-guard.service";
 
 import {EditModule} from "./edit/edit.module";
@@ -19,7 +19,7 @@ import { AuthService } from './shared/auth.service';
     ],
     imports:[
         CommonModule,
-        HobbyRoutingModule,
+        HotelsRoutingModule,
         FormsModule,
         ReactiveFormsModule,
         EditModule
@@ -29,4 +29,4 @@ import { AuthService } from './shared/auth.service';
         AuthService],
 })
 
-export class HobbyModule {}
+export class HotelsModule {}

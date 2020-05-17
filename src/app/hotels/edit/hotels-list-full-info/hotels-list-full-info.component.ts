@@ -77,11 +77,11 @@ export class HotelsListFullComponent implements OnInit{
     }
 
     goToHotelsList(){
-        this.router.navigate(["/hobby"]);
+        this.router.navigate(["/hotels"]);
     }
 
     goToAdminPage(){
-        this.router.navigate(["/hobby/admin"]);
+        this.router.navigate(["/hotels/admin"]);
     }
 
 }

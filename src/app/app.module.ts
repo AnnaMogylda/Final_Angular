@@ -10,7 +10,7 @@ import { HomeGeneralInfoComponent } from './home/generalInfo/home.generalInfo.co
 
 import { professionalSkillsModule } from './home/professionalSkills/professionalSkills.module';
 import { CoursesModule } from "./courses/courses.module";
-import {HobbyModule} from './hobby/hobby.module';
+import {HotelsModule} from './hotels/hotels.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import {HobbyModule} from './hobby/hobby.module';
     FormsModule,
     professionalSkillsModule,
     CoursesModule,
-    HobbyModule,
+    HotelsModule,
     HttpClientModule
   ],
   providers: [],
